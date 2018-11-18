@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Git, Github, Node.js, npm, Hexo, Markdown," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="1. Git及Github 1.1 Git相关命令 1.2 GitHub   2. Node.js及npm 3. Hexo相关命令 4. Markdown标记语言 5. Atom编辑md文件 6. 文章中添加图片   1. Git及Github1.1 Git相关命令Git是一个分散式版本控制软件，最初由林纳斯·托瓦兹（Linus Torvalds）创作，于2005年以GPL释出。最初目的是为">
+<meta name="keywords" content="Git, Github, Node.js, npm, Hexo, Markdown">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Github Pages + Hexo：搭建个人博客及工具命令">
+<meta property="og:url" content="https://dxsjiao2017.github.io/2018/07/01/Github Pages & Hexo：搭建个人博客及工具命令/index.html">
+<meta property="og:site_name" content="dong.xx blogs">
+<meta property="og:description" content="1. Git及Github 1.1 Git相关命令 1.2 GitHub   2. Node.js及npm 3. Hexo相关命令 4. Markdown标记语言 5. Atom编辑md文件 6. 文章中添加图片   1. Git及Github1.1 Git相关命令Git是一个分散式版本控制软件，最初由林纳斯·托瓦兹（Linus Torvalds）创作，于2005年以GPL释出。最初目的是为">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="https://www.yiibai.com/uploads/images/201707/1207/683090701_88630.jpg">
+<meta property="og:updated_time" content="2018-11-18T12:00:28.789Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Github Pages + Hexo：搭建个人博客及工具命令">
+<meta name="twitter:description" content="1. Git及Github 1.1 Git相关命令 1.2 GitHub   2. Node.js及npm 3. Hexo相关命令 4. Markdown标记语言 5. Atom编辑md文件 6. 文章中添加图片   1. Git及Github1.1 Git相关命令Git是一个分散式版本控制软件，最初由林纳斯·托瓦兹（Linus Torvalds）创作，于2005年以GPL释出。最初目的是为">
+<meta name="twitter:image" content="https://www.yiibai.com/uploads/images/201707/1207/683090701_88630.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://dxsjiao2017.github.io/2018/07/01/Github Pages & Hexo：搭建个人博客及工具命令/"/>
+
+
+
+
+
+  <title>Github Pages + Hexo：搭建个人博客及工具命令 | dong.xx blogs</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">dong.xx blogs</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">learning by doing!</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://dxsjiao2017.github.io/2018/07/01/Github Pages & Hexo：搭建个人博客及工具命令/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="dong.xx">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="dong.xx blogs">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Github Pages + Hexo：搭建个人博客及工具命令</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-01T13:49:04+08:00">
+                2018-07-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+<!-- code_chunk_output -->
+<ul>
+<li><a href="#1-git及github">1. Git及Github</a><ul>
+<li><a href="#11-git相关命令">1.1 Git相关命令</a></li>
+<li><a href="#12-github">1.2 GitHub</a></li>
+</ul>
+</li>
+<li><a href="#2-nodejs及npm">2. Node.js及npm</a></li>
+<li><a href="#3-hexo相关命令">3. Hexo相关命令</a></li>
+<li><a href="#4-markdown标记语言">4. Markdown标记语言</a></li>
+<li><a href="#5-atom编辑md文件">5. Atom编辑md文件</a></li>
+<li><a href="#6-文章中添加图片">6. 文章中添加图片</a></li>
+</ul>
+<!-- /code_chunk_output -->
+<h4 id="1-Git及Github"><a href="#1-Git及Github" class="headerlink" title="1. Git及Github"></a>1. Git及Github</h4><h5 id="1-1-Git相关命令"><a href="#1-1-Git相关命令" class="headerlink" title="1.1 Git相关命令"></a>1.1 Git相关命令</h5><p>Git是一个分散式版本控制软件，最初由林纳斯·托瓦兹（Linus Torvalds）创作，于2005年以GPL释出。最初目的是为更好地管理Linux内核开发而设计。与CVS、Subversion一类的集中式版本控制工具不同，Git采用了分布式版本库的作法，不需要服务器端软件，就可以运作版本控制，使得源代码的发布和交流极其方便。git最为出色的是它的合并追踪（merge tracing）能力。<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">git官方下载地址。</a><br><strong>常用命令</strong>（<a href="http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html" target="_blank" rel="noopener">转自阮一峰老师博客</a>)：<br><img src="https://www.yiibai.com/uploads/images/201707/1207/683090701_88630.jpg" alt="git图解"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Workspace：工作区</span><br><span class="line">Index / Stage：暂存区</span><br><span class="line">Repository：仓库区（或本地仓库）</span><br><span class="line">Remote：远程仓库</span><br></pre></td></tr></table></figure></p>
+<ol>
+<li>新建代码库<ul>
+<li>在当前目录新建一个Git代码库： <code>$ git init</code></li>
+<li>新建一个目录，将其初始化为Git代码库： <code>$ git init [project-name]</code></li>
+<li>下载一个项目和它的整个代码历史： <code>$ git clone [project-name]</code></li>
+</ul>
+</li>
+<li><p>配置：Git的设置文件为.gitconfig，它可以在用户主目录下（全局配置），也可以在项目目录下（项目配置）。</p>
+<ul>
+<li>显示当前的Git配置：<code>$ git config --list</code></li>
+<li>编辑Git配置文件: <code>$ git config -e [--global]</code></li>
+<li>设置提交代码时的用户信息:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config [--global] user.name &quot;[name]&quot;</span><br><span class="line">$ git config [--global] user.email &quot;[email address]&quot;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>增加/删除文件</p>
+<ul>
+<li>添加指定文件到暂存区：<code>$ git add [file1] [file2] ...</code></li>
+<li>添加指定目录到暂存区，包括子目录：<code>$ git add [dir]</code></li>
+<li>添加当前目录的所有文件到暂存区：<code>$ git add .</code></li>
+<li>添加每个变化前，都会要求确认;对于同一个文件的多处变化，可以实现分次提交：<code>$ git add -p</code></li>
+<li>删除工作区文件，并且将这次删除放入暂存区：<code>$ git rm [file1] [file2] ...</code></li>
+<li>停止追踪指定文件，但该文件会保留在工作区：<code>$ git rm --cached [file]</code></li>
+<li>改名文件，并且将这个改名放入暂存区：<code>$ git mv [file-original] [file-renamed]</code></li>
+</ul>
+</li>
+<li>代码提交<ul>
+<li>提交暂存区到仓库区：<code>$ git commit -m [message]</code></li>
+<li>提交暂存区的指定文件到仓库区：<code>$ git commit [file1] [file2] ... -m [message]</code></li>
+<li>提交工作区自上次commit之后的变化，直接到仓库区：<code>$ git commit -a</code></li>
+<li>提交时显示所有diff信息：<code>$ git commit -v</code></li>
+<li>使用一次新的commit，替代上一次提交；如果代码没有任何新的变化，则用来改写上一次commit的提交信息：<code>$ git commit --amend -m [message]</code></li>
+<li>重做上一次commit，并包括指定文件的新变化：<code>$ git commit --amend [file1] [file2]</code></li>
+</ul>
+</li>
+<li><p>分支</p>
+<ul>
+<li>列出所有本地分支：<code>$ git branch</code></li>
+<li>列出所有远程分支：<code>$ git branch -r</code></li>
+<li>列出所有本地分支和远程分支：<code>$ git branch -a</code></li>
+<li>新建一个分支，但依然停留在当前分支：<code>$ git branch [branch-name]</code></li>
+<li>新建一个分支，并切换到该分支：<code>$ git checkout -b [branch]</code></li>
+<li>新建一个分支，指向指定commit：<code>$ git branch [branch] [commit]</code></li>
+<li>新建一个分支，与制定的远程分支建立追踪关系：<code>$ git branch --track [branch] [remote-branch]</code></li>
+<li>切换到指定分支，并更新工作区：<code>$ git checkout [branck-name]</code></li>
+<li>切换到上一个分支：<code>$ git chechout -</code></li>
+<li>建立追踪关系，在现有分支与制定的远程分支之间：<code>$ git branch --set-upstream [branch] [remote-branch]</code></li>
+<li>合并指定分支到当前分支：<code>$ git merge [branch]</code></li>
+<li>选择一个commit，合并进当前分支：<code>$ git cherry-pick [commit]</code></li>
+<li>删除分支：<code>$ git branch -d [branch-name]</code></li>
+<li>删除远程分支：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git push origin --delete [branch-name]</span><br><span class="line">$ git branch -dr [remote/branch]</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>标签</p>
+</li>
+<li>查看信息</li>
+<li>远程同步</li>
+<li>撤销</li>
+<li>其他</li>
+</ol>
+<blockquote>
+<p>参考资料</p>
+<ol>
+<li><a href="https://zh.wikipedia.org/zh-hans/Git" target="_blank" rel="noopener">Git维基百科</a></li>
+<li><a href="http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html" target="_blank" rel="noopener">Git常用命令清单</a></li>
+<li><a href="https://git.wiki.kernel.org/index.php/GitFaq" target="_blank" rel="noopener">Git FAQ</a></li>
+</ol>
+</blockquote>
+<h5 id="1-2-GitHub"><a href="#1-2-GitHub" class="headerlink" title="1.2 GitHub"></a>1.2 GitHub</h5><h4 id="2-Node-js及npm"><a href="#2-Node-js及npm" class="headerlink" title="2. Node.js及npm"></a>2. Node.js及npm</h4><h4 id="3-Hexo相关命令"><a href="#3-Hexo相关命令" class="headerlink" title="3. Hexo相关命令"></a>3. Hexo相关命令</h4><h4 id="4-Markdown标记语言"><a href="#4-Markdown标记语言" class="headerlink" title="4. Markdown标记语言"></a>4. Markdown标记语言</h4><blockquote>
+<p>参考文章：<a href="http://connorlin.github.io/2016/05/06/Markdown%E7%9A%84%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95(%E4%B8%AA%E4%BA%BA%E6%80%BB%E7%BB%93" target="_blank" rel="noopener">Markdown的常用语法(个人总结)</a>/)</p>
+</blockquote>
+<h4 id="5-Atom编辑md文件"><a href="#5-Atom编辑md文件" class="headerlink" title="5. Atom编辑md文件"></a>5. Atom编辑md文件</h4><blockquote>
+<p>参考文章：</p>
+<ol>
+<li><a href="">使用Atom打造无懈可击的Markdown编辑器;</a></li>
+<li><a href="http://blog.sciencenet.cn/blog-377709-1088215.html" target="_blank" rel="noopener">王树义老师：如何用Markdown写论文？</a></li>
+</ol>
+</blockquote>
+<p>Atom中重要的插件：</p>
+<ol>
+<li><a href="https://atom.io/packages/markdown-preview-enhanced" target="_blank" rel="noopener">markdown-preview-enhanced;</a>：支持latex语法的数学公式；（关键作者头像是 宝儿姐。。）</li>
+</ol>
+<h4 id="6-文章中添加图片"><a href="#6-文章中添加图片" class="headerlink" title="6. 文章中添加图片"></a>6. 文章中添加图片</h4><ol>
+<li>可以选择统一放在images文件夹中；</li>
+<li>选择第三方网站的图片；<blockquote>
+<p><strong>优先使用这种方式</strong>（不过要做好图片本地备份）。</p>
+</blockquote>
+</li>
+<li>修改 _config.yml 文件: <code>post_asset_folder: true</code>，然后执行命令：<code>npm install hexo-asset-image --save</code>;当更新博客时，执行命令 $ hexo new post_name，在source/_posts中生成与文章post_name.md同名的文件夹post_name。将图片资源放在post_name中，可使用相对路径引用图片。</li>
+</ol>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Git-Github-Node-js-npm-Hexo-Markdown/" rel="tag"># Git, Github, Node.js, npm, Hexo, Markdown</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/06/30/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/11/18/python-visualization/" rel="prev" title="python_visualization">
+                python_visualization <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">dong.xx</p>
+              <p class="site-description motion-element" itemprop="description">learning by doing!</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-Git及Github"><span class="nav-number">1.</span> <span class="nav-text">1. Git及Github</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-1-Git相关命令"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 Git相关命令</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-2-GitHub"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 GitHub</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-Node-js及npm"><span class="nav-number">2.</span> <span class="nav-text">2. Node.js及npm</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-Hexo相关命令"><span class="nav-number">3.</span> <span class="nav-text">3. Hexo相关命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-Markdown标记语言"><span class="nav-number">4.</span> <span class="nav-text">4. Markdown标记语言</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-Atom编辑md文件"><span class="nav-number">5.</span> <span class="nav-text">5. Atom编辑md文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-文章中添加图片"><span class="nav-number">6.</span> <span class="nav-text">6. 文章中添加图片</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">dong.xx</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+
+  
+
+  
+
+</body>
+</html>

@@ -79,17 +79,55 @@
 
 
 
-<meta name="description" content="learning by doing!">
+<meta name="description" content="0.实验环境、参考资料、数据来源实验环境：Win10 + Anaconda3(64-bit，python 3.7.0) + Jupyter Notebook + matplotlib(2.2.3) + seaborn(0.9.0); 源代码可在我的Github上下载。  Python 是一门简单易学且功能强大的编程语言。它拥有高效的高级数据结构，并且能够用简单而又高效的方式进行面向对象编程，是一种">
 <meta name="keywords" content="IR, NLP, machine learning, data mining, python">
-<meta property="og:type" content="website">
-<meta property="og:title" content="dong.xx blogs">
-<meta property="og:url" content="https://dxsjiao2017.github.io/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python_visualization">
+<meta property="og:url" content="https://dxsjiao2017.github.io/2018/11/18/python-visualization/index.html">
 <meta property="og:site_name" content="dong.xx blogs">
-<meta property="og:description" content="learning by doing!">
+<meta property="og:description" content="0.实验环境、参考资料、数据来源实验环境：Win10 + Anaconda3(64-bit，python 3.7.0) + Jupyter Notebook + matplotlib(2.2.3) + seaborn(0.9.0); 源代码可在我的Github上下载。  Python 是一门简单易学且功能强大的编程语言。它拥有高效的高级数据结构，并且能够用简单而又高效的方式进行面向对象编程，是一种">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://dxsjiao2017.github.io/2018/11/18/python-visualization/output_14_1.png">
+<meta property="og:image" content="https://dxsjiao2017.github.io/2018/11/18/python-visualization/output_16_1.png">
+<meta property="og:image" content="https://dxsjiao2017.github.io/2018/11/18/python-visualization/output_20_1.png">
+<meta property="og:image" content="https://dxsjiao2017.github.io/2018/11/18/python-visualization/output_22_1.png">
+<meta property="og:image" content="https://dxsjiao2017.github.io/2018/11/18/python-visualization/output_23_1.png">
+<meta property="og:image" content="https://dxsjiao2017.github.io/2018/11/18/python-visualization/output_25_0.png">
+<meta property="og:image" content="https://dxsjiao2017.github.io/2018/11/18/python-visualization/output_26_0.png">
+<meta property="og:image" content="https://matplotlib.org/_images/anatomy1.png">
+<meta property="og:image" content="https://dxsjiao2017.github.io/2018/11/18/python-visualization/output_28_1.png">
+<meta property="og:image" content="https://dxsjiao2017.github.io/2018/11/18/python-visualization/output_31_1.png">
+<meta property="og:image" content="https://dxsjiao2017.github.io/2018/11/18/python-visualization/output_32_0.png">
+<meta property="og:image" content="https://dxsjiao2017.github.io/2018/11/18/python-visualization/鸢尾花.png">
+<meta property="og:image" content="https://dxsjiao2017.github.io/2018/11/18/python-visualization/output_42_1.png">
+<meta property="og:image" content="https://dxsjiao2017.github.io/2018/11/18/python-visualization/output_43_1.png">
+<meta property="og:image" content="https://dxsjiao2017.github.io/2018/11/18/python-visualization/output_45_1.png">
+<meta property="og:image" content="https://dxsjiao2017.github.io/2018/11/18/python-visualization/output_46_1.png">
+<meta property="og:image" content="https://dxsjiao2017.github.io/2018/11/18/python-visualization/output_47_1.png">
+<meta property="og:image" content="https://dxsjiao2017.github.io/2018/11/18/python-visualization/output_48_1.png">
+<meta property="og:image" content="https://dxsjiao2017.github.io/2018/11/18/python-visualization/output_49_1.png">
+<meta property="og:image" content="https://dxsjiao2017.github.io/2018/11/18/python-visualization/output_50_1.png">
+<meta property="og:image" content="https://dxsjiao2017.github.io/2018/11/18/python-visualization/output_52_1.png">
+<meta property="og:image" content="https://dxsjiao2017.github.io/2018/11/18/python-visualization/output_53_1.png">
+<meta property="og:image" content="https://dxsjiao2017.github.io/2018/11/18/python-visualization/output_54_1.png">
+<meta property="og:image" content="https://dxsjiao2017.github.io/2018/11/18/python-visualization/output_56_1.png">
+<meta property="og:image" content="https://dxsjiao2017.github.io/2018/11/18/python-visualization/output_57_1.png">
+<meta property="og:image" content="https://dxsjiao2017.github.io/2018/11/18/python-visualization/output_58_1.png">
+<meta property="og:image" content="https://dxsjiao2017.github.io/2018/11/18/python-visualization/output_60_1.png">
+<meta property="og:image" content="https://dxsjiao2017.github.io/2018/11/18/python-visualization/output_62_1.png">
+<meta property="og:image" content="https://dxsjiao2017.github.io/2018/11/18/python-visualization/output_63_1.png">
+<meta property="og:image" content="https://dxsjiao2017.github.io/2018/11/18/python-visualization/output_65_1.png">
+<meta property="og:image" content="https://dxsjiao2017.github.io/2018/11/18/python-visualization/output_66_1.png">
+<meta property="og:image" content="https://dxsjiao2017.github.io/2018/11/18/python-visualization/output_67_0.png">
+<meta property="og:image" content="https://dxsjiao2017.github.io/2018/11/18/python-visualization/output_69_1.png">
+<meta property="og:image" content="https://dxsjiao2017.github.io/2018/11/18/python-visualization/output_70_1.png">
+<meta property="og:image" content="https://dxsjiao2017.github.io/2018/11/18/python-visualization/output_71_0.png">
+<meta property="og:image" content="https://dxsjiao2017.github.io/2018/11/18/python-visualization/output_72_1.png">
+<meta property="og:updated_time" content="2018-11-18T12:28:29.844Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="dong.xx blogs">
-<meta name="twitter:description" content="learning by doing!">
+<meta name="twitter:title" content="python_visualization">
+<meta name="twitter:description" content="0.实验环境、参考资料、数据来源实验环境：Win10 + Anaconda3(64-bit，python 3.7.0) + Jupyter Notebook + matplotlib(2.2.3) + seaborn(0.9.0); 源代码可在我的Github上下载。  Python 是一门简单易学且功能强大的编程语言。它拥有高效的高级数据结构，并且能够用简单而又高效的方式进行面向对象编程，是一种">
+<meta name="twitter:image" content="https://dxsjiao2017.github.io/2018/11/18/python-visualization/output_14_1.png">
 
 
 
@@ -119,13 +157,13 @@
 
 
 
-  <link rel="canonical" href="https://dxsjiao2017.github.io/"/>
+  <link rel="canonical" href="https://dxsjiao2017.github.io/2018/11/18/python-visualization/"/>
 
 
 
 
 
-  <title>dong.xx blogs</title>
+  <title>python_visualization | dong.xx blogs</title>
   
 
 
@@ -144,8 +182,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -218,9 +255,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -250,9 +287,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/18/python-visualization/" itemprop="url">python_visualization</a></h1>
+          <h1 class="post-title" itemprop="name headline">python_visualization</h1>
         
 
         <div class="post-meta">
@@ -302,9 +337,7 @@
       
 
       
-        
-          
-            <h1 id="0-实验环境、参考资料、数据来源"><a href="#0-实验环境、参考资料、数据来源" class="headerlink" title="0.实验环境、参考资料、数据来源"></a>0.实验环境、参考资料、数据来源</h1><h4 id="实验环境：Win10-Anaconda3-64-bit，python-3-7-0-Jupyter-Notebook-matplotlib-2-2-3-seaborn-0-9-0"><a href="#实验环境：Win10-Anaconda3-64-bit，python-3-7-0-Jupyter-Notebook-matplotlib-2-2-3-seaborn-0-9-0" class="headerlink" title="实验环境：Win10 + Anaconda3(64-bit，python 3.7.0) + Jupyter Notebook + matplotlib(2.2.3) + seaborn(0.9.0);"></a>实验环境：Win10 + Anaconda3(64-bit，python 3.7.0) + Jupyter Notebook + matplotlib(2.2.3) + seaborn(0.9.0);</h4><blockquote>
+        <h1 id="0-实验环境、参考资料、数据来源"><a href="#0-实验环境、参考资料、数据来源" class="headerlink" title="0.实验环境、参考资料、数据来源"></a>0.实验环境、参考资料、数据来源</h1><h4 id="实验环境：Win10-Anaconda3-64-bit，python-3-7-0-Jupyter-Notebook-matplotlib-2-2-3-seaborn-0-9-0"><a href="#实验环境：Win10-Anaconda3-64-bit，python-3-7-0-Jupyter-Notebook-matplotlib-2-2-3-seaborn-0-9-0" class="headerlink" title="实验环境：Win10 + Anaconda3(64-bit，python 3.7.0) + Jupyter Notebook + matplotlib(2.2.3) + seaborn(0.9.0);"></a>实验环境：Win10 + Anaconda3(64-bit，python 3.7.0) + Jupyter Notebook + matplotlib(2.2.3) + seaborn(0.9.0);</h4><blockquote>
 <p>源代码可在<a href="https://github.com/dxsjiao2017/python-visualization" target="_blank" rel="noopener">我的Github</a>上下载。</p>
 </blockquote>
 <p>Python 是一门简单易学且功能强大的编程语言。它拥有高效的高级数据结构，并且能够用简单而又高效的方式进行面向对象编程，是一种面向对象的解释型计算机程序设计语言，具有跨平台的特点，可以在Linux、macOS以及Windows系统中搭建环境并使用。最新版本3.7；python 2.7 官方支持到2020年结束，不建议再学习python 2.x ；</p>
@@ -553,8 +586,6 @@ Name: Species, dtype: int64
 </code></pre><p><img src="/2018/11/18/python-visualization/output_72_1.png" alt="png"></p>
 <p>除了以上函数外，seaborn还提供了样式控制和色调控制，如前面设置sns.set(style=”white”, color_codes=True)。具体使用请查阅官方文档。</p>
 
-          
-        
       
     </div>
     
@@ -571,238 +602,28 @@ Name: Species, dtype: int64
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dxsjiao2017.github.io/2018/07/01/Github Pages & Hexo：搭建个人博客及工具命令/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="dong.xx">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="dong.xx blogs">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/01/Github Pages & Hexo：搭建个人博客及工具命令/" itemprop="url">Github Pages + Hexo：搭建个人博客及工具命令</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-01T13:49:04+08:00">
-                2018-07-01
-              </time>
+              <a href="/2018/07/01/Github Pages & Hexo：搭建个人博客及工具命令/" rel="next" title="Github Pages + Hexo：搭建个人博客及工具命令">
+                <i class="fa fa-chevron-left"></i> Github Pages + Hexo：搭建个人博客及工具命令
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
-<!-- code_chunk_output -->
-<ul>
-<li><a href="#1-git及github">1. Git及Github</a><ul>
-<li><a href="#11-git相关命令">1.1 Git相关命令</a></li>
-<li><a href="#12-github">1.2 GitHub</a></li>
-</ul>
-</li>
-<li><a href="#2-nodejs及npm">2. Node.js及npm</a></li>
-<li><a href="#3-hexo相关命令">3. Hexo相关命令</a></li>
-<li><a href="#4-markdown标记语言">4. Markdown标记语言</a></li>
-<li><a href="#5-atom编辑md文件">5. Atom编辑md文件</a></li>
-<li><a href="#6-文章中添加图片">6. 文章中添加图片</a></li>
-</ul>
-<!-- /code_chunk_output -->
-<h4 id="1-Git及Github"><a href="#1-Git及Github" class="headerlink" title="1. Git及Github"></a>1. Git及Github</h4><h5 id="1-1-Git相关命令"><a href="#1-1-Git相关命令" class="headerlink" title="1.1 Git相关命令"></a>1.1 Git相关命令</h5><p>Git是一个分散式版本控制软件，最初由林纳斯·托瓦兹（Linus Torvalds）创作，于2005年以GPL释出。最初目的是为更好地管理Linux内核开发而设计。与CVS、Subversion一类的集中式版本控制工具不同，Git采用了分布式版本库的作法，不需要服务器端软件，就可以运作版本控制，使得源代码的发布和交流极其方便。git最为出色的是它的合并追踪（merge tracing）能力。<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">git官方下载地址。</a><br><strong>常用命令</strong>（<a href="http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html" target="_blank" rel="noopener">转自阮一峰老师博客</a>)：<br><img src="https://www.yiibai.com/uploads/images/201707/1207/683090701_88630.jpg" alt="git图解"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Workspace：工作区</span><br><span class="line">Index / Stage：暂存区</span><br><span class="line">Repository：仓库区（或本地仓库）</span><br><span class="line">Remote：远程仓库</span><br></pre></td></tr></table></figure></p>
-<ol>
-<li>新建代码库<ul>
-<li>在当前目录新建一个Git代码库： <code>$ git init</code></li>
-<li>新建一个目录，将其初始化为Git代码库： <code>$ git init [project-name]</code></li>
-<li>下载一个项目和它的整个代码历史： <code>$ git clone [project-name]</code></li>
-</ul>
-</li>
-<li><p>配置：Git的设置文件为.gitconfig，它可以在用户主目录下（全局配置），也可以在项目目录下（项目配置）。</p>
-<ul>
-<li>显示当前的Git配置：<code>$ git config --list</code></li>
-<li>编辑Git配置文件: <code>$ git config -e [--global]</code></li>
-<li>设置提交代码时的用户信息:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config [--global] user.name &quot;[name]&quot;</span><br><span class="line">$ git config [--global] user.email &quot;[email address]&quot;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>增加/删除文件</p>
-<ul>
-<li>添加指定文件到暂存区：<code>$ git add [file1] [file2] ...</code></li>
-<li>添加指定目录到暂存区，包括子目录：<code>$ git add [dir]</code></li>
-<li>添加当前目录的所有文件到暂存区：<code>$ git add .</code></li>
-<li>添加每个变化前，都会要求确认;对于同一个文件的多处变化，可以实现分次提交：<code>$ git add -p</code></li>
-<li>删除工作区文件，并且将这次删除放入暂存区：<code>$ git rm [file1] [file2] ...</code></li>
-<li>停止追踪指定文件，但该文件会保留在工作区：<code>$ git rm --cached [file]</code></li>
-<li>改名文件，并且将这个改名放入暂存区：<code>$ git mv [file-original] [file-renamed]</code></li>
-</ul>
-</li>
-<li>代码提交<ul>
-<li>提交暂存区到仓库区：<code>$ git commit -m [message]</code></li>
-<li>提交暂存区的指定文件到仓库区：<code>$ git commit [file1] [file2] ... -m [message]</code></li>
-<li>提交工作区自上次commit之后的变化，直接到仓库区：<code>$ git commit -a</code></li>
-<li>提交时显示所有diff信息：<code>$ git commit -v</code></li>
-<li>使用一次新的commit，替代上一次提交；如果代码没有任何新的变化，则用来改写上一次commit的提交信息：<code>$ git commit --amend -m [message]</code></li>
-<li>重做上一次commit，并包括指定文件的新变化：<code>$ git commit --amend [file1] [file2]</code></li>
-</ul>
-</li>
-<li><p>分支</p>
-<ul>
-<li>列出所有本地分支：<code>$ git branch</code></li>
-<li>列出所有远程分支：<code>$ git branch -r</code></li>
-<li>列出所有本地分支和远程分支：<code>$ git branch -a</code></li>
-<li>新建一个分支，但依然停留在当前分支：<code>$ git branch [branch-name]</code></li>
-<li>新建一个分支，并切换到该分支：<code>$ git checkout -b [branch]</code></li>
-<li>新建一个分支，指向指定commit：<code>$ git branch [branch] [commit]</code></li>
-<li>新建一个分支，与制定的远程分支建立追踪关系：<code>$ git branch --track [branch] [remote-branch]</code></li>
-<li>切换到指定分支，并更新工作区：<code>$ git checkout [branck-name]</code></li>
-<li>切换到上一个分支：<code>$ git chechout -</code></li>
-<li>建立追踪关系，在现有分支与制定的远程分支之间：<code>$ git branch --set-upstream [branch] [remote-branch]</code></li>
-<li>合并指定分支到当前分支：<code>$ git merge [branch]</code></li>
-<li>选择一个commit，合并进当前分支：<code>$ git cherry-pick [commit]</code></li>
-<li>删除分支：<code>$ git branch -d [branch-name]</code></li>
-<li>删除远程分支：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git push origin --delete [branch-name]</span><br><span class="line">$ git branch -dr [remote/branch]</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>标签</p>
-</li>
-<li>查看信息</li>
-<li>远程同步</li>
-<li>撤销</li>
-<li>其他</li>
-</ol>
-<blockquote>
-<p>参考资料</p>
-<ol>
-<li><a href="https://zh.wikipedia.org/zh-hans/Git" target="_blank" rel="noopener">Git维基百科</a></li>
-<li><a href="http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html" target="_blank" rel="noopener">Git常用命令清单</a></li>
-<li><a href="https://git.wiki.kernel.org/index.php/GitFaq" target="_blank" rel="noopener">Git FAQ</a></li>
-</ol>
-</blockquote>
-<h5 id="1-2-GitHub"><a href="#1-2-GitHub" class="headerlink" title="1.2 GitHub"></a>1.2 GitHub</h5><h4 id="2-Node-js及npm"><a href="#2-Node-js及npm" class="headerlink" title="2. Node.js及npm"></a>2. Node.js及npm</h4><h4 id="3-Hexo相关命令"><a href="#3-Hexo相关命令" class="headerlink" title="3. Hexo相关命令"></a>3. Hexo相关命令</h4><h4 id="4-Markdown标记语言"><a href="#4-Markdown标记语言" class="headerlink" title="4. Markdown标记语言"></a>4. Markdown标记语言</h4><blockquote>
-<p>参考文章：<a href="http://connorlin.github.io/2016/05/06/Markdown%E7%9A%84%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95(%E4%B8%AA%E4%BA%BA%E6%80%BB%E7%BB%93" target="_blank" rel="noopener">Markdown的常用语法(个人总结)</a>/)</p>
-</blockquote>
-<h4 id="5-Atom编辑md文件"><a href="#5-Atom编辑md文件" class="headerlink" title="5. Atom编辑md文件"></a>5. Atom编辑md文件</h4><blockquote>
-<p>参考文章：</p>
-<ol>
-<li><a href="">使用Atom打造无懈可击的Markdown编辑器;</a></li>
-<li><a href="http://blog.sciencenet.cn/blog-377709-1088215.html" target="_blank" rel="noopener">王树义老师：如何用Markdown写论文？</a></li>
-</ol>
-</blockquote>
-<p>Atom中重要的插件：</p>
-<ol>
-<li><a href="https://atom.io/packages/markdown-preview-enhanced" target="_blank" rel="noopener">markdown-preview-enhanced;</a>：支持latex语法的数学公式；（关键作者头像是 宝儿姐。。）</li>
-</ol>
-<h4 id="6-文章中添加图片"><a href="#6-文章中添加图片" class="headerlink" title="6. 文章中添加图片"></a>6. 文章中添加图片</h4><ol>
-<li>可以选择统一放在images文件夹中；</li>
-<li>选择第三方网站的图片；<blockquote>
-<p><strong>优先使用这种方式</strong>（不过要做好图片本地备份）。</p>
-</blockquote>
-</li>
-<li>修改 _config.yml 文件: <code>post_asset_folder: true</code>，然后执行命令：<code>npm install hexo-asset-image --save</code>;当更新博客时，执行命令 $ hexo new post_name，在source/_posts中生成与文章post_name.md同名的文件夹post_name。将图片资源放在post_name中，可使用相对路径引用图片。</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -812,138 +633,11 @@ Name: Species, dtype: int64
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dxsjiao2017.github.io/2018/06/30/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="dong.xx">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="dong.xx blogs">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/06/30/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-30T23:56:46+08:00">
-                2018-06-30
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
+    <div class="post-spread">
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
 
 
           </div>
@@ -951,6 +645,10 @@ Name: Species, dtype: int64
 
 
           
+
+  
+
+
 
         </div>
         
@@ -971,8 +669,17 @@ Name: Species, dtype: int64
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -1023,6 +730,22 @@ Name: Species, dtype: int64
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#0-实验环境、参考资料、数据来源"><span class="nav-number">1.</span> <span class="nav-text">0.实验环境、参考资料、数据来源</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#实验环境：Win10-Anaconda3-64-bit，python-3-7-0-Jupyter-Notebook-matplotlib-2-2-3-seaborn-0-9-0"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">实验环境：Win10 + Anaconda3(64-bit，python 3.7.0) + Jupyter Notebook + matplotlib(2.2.3) + seaborn(0.9.0);</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#参考资料："><span class="nav-number">1.0.0.2.</span> <span class="nav-text">参考资料：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据来源："><span class="nav-number">1.0.0.3.</span> <span class="nav-text">数据来源：</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Jupyter项目"><span class="nav-number">2.</span> <span class="nav-text">1.Jupyter项目</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-Jupyter简介"><span class="nav-number">2.0.0.1.</span> <span class="nav-text">1.1 Jupyter简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-ipynb-文件由多个cell组成；cell是基本单元；"><span class="nav-number">2.0.0.2.</span> <span class="nav-text">1.2 .ipynb 文件由多个cell组成；cell是基本单元；</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#cell的两种状态："><span class="nav-number">2.0.0.2.0.1.</span> <span class="nav-text">cell的两种状态：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#cell的三种类型："><span class="nav-number">2.0.0.2.0.2.</span> <span class="nav-text">cell的三种类型：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#cell执行"><span class="nav-number">2.0.0.2.0.3.</span> <span class="nav-text">cell执行</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Python可视化模块"><span class="nav-number">3.</span> <span class="nav-text">2.Python可视化模块</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Matplotlib："><span class="nav-number">3.0.0.1.</span> <span class="nav-text">Matplotlib：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Seaborn："><span class="nav-number">3.0.0.2.</span> <span class="nav-text">Seaborn：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#其他："><span class="nav-number">3.0.0.3.</span> <span class="nav-text">其他：</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-通过实例演示Matplotlib和Seaborn"><span class="nav-number">4.</span> <span class="nav-text">3.通过实例演示Matplotlib和Seaborn</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-matplotlib绘图"><span class="nav-number">4.0.0.1.</span> <span class="nav-text">3.1 matplotlib绘图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-1-pyplot使用"><span class="nav-number">4.0.0.2.</span> <span class="nav-text">3.1.1 pyplot使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#pyplot-中可以使用绘制不同图形API有："><span class="nav-number">4.0.0.3.</span> <span class="nav-text">pyplot()中可以使用绘制不同图形API有：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#给图形添加文字说明：坐标轴标题，图形标题，图例（legend）"><span class="nav-number">4.0.0.4.</span> <span class="nav-text">给图形添加文字说明：坐标轴标题，图形标题，图例（legend）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-2-面向对象的绘图方式"><span class="nav-number">4.0.0.5.</span> <span class="nav-text">3.1.2 面向对象的绘图方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-seaborn绘图"><span class="nav-number">4.0.0.6.</span> <span class="nav-text">3.2 seaborn绘图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-1-绘制变量关系图（散点图、折线图）"><span class="nav-number">4.0.0.7.</span> <span class="nav-text">3.2.1 绘制变量关系图（散点图、折线图）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-2分类变量可视化"><span class="nav-number">4.0.0.8.</span> <span class="nav-text">3.2.2分类变量可视化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分类变量的统计估计"><span class="nav-number">4.0.0.9.</span> <span class="nav-text">分类变量的统计估计</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-3-可视化一个数据集的分布"><span class="nav-number">4.0.0.10.</span> <span class="nav-text">3.2.3 可视化一个数据集的分布</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#绘制双变量分布"><span class="nav-number">4.0.0.11.</span> <span class="nav-text">绘制双变量分布</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#可视化数据集中的成对关系"><span class="nav-number">4.0.0.12.</span> <span class="nav-text">可视化数据集中的成对关系</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用seaborn-FacetGrid-、seaborn-PairGrid-、JointGrid-分组绘图-Multi-plot-grids；"><span class="nav-number">4.0.0.13.</span> <span class="nav-text">使用seaborn.FacetGrid()、seaborn.PairGrid()、JointGrid() 分组绘图-Multi-plot grids；</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1156,6 +879,10 @@ Name: Species, dtype: int64
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -1213,26 +940,6 @@ Name: Species, dtype: int64
   
 
   
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 
