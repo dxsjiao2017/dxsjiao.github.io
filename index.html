@@ -385,7 +385,7 @@
 <li>plt.barh(): 柱状图（水平）；</li>
 <li>plt.boxplot()：箱线图；</li>
 <li>plt.clabel()：等高线图；</li>
-<li>plt.hexbin()：六边形</li>
+<li>plt.hexbin()：六边形；</li>
 <li>plt.hist()：直方图；</li>
 <li>plt.scatter()：散点图；</li>
 </ul>
@@ -409,7 +409,7 @@
 <p><img src="/2018/11/18/python-visualization/output_32_0.png" alt="png"></p>
 <p>matplotlib实际上是一种比较低级的工具，有许多可以自定义的地方，绘图能力十分强大。但是，操作命令也十分复杂。pandas内置的绘图方法，底层调用的也是matplotlib模块。简单的绘图，我们可以直接考虑使用seaborn。</p>
 <h4 id="3-2-seaborn绘图"><a href="#3-2-seaborn绘图" class="headerlink" title="3.2 seaborn绘图"></a>3.2 seaborn绘图</h4><p>Seaborn 由Michael Waskom创建的静态图形库。Seaborn简化了许多常见可视类型的创建。seaborn的数据多是 pandas.DataFrame 格式。seaborn在某些情况下简化了绘图，但并不能完全取代matplotlib，应当视seaborn为matplotlib的辅助工具。</p>
-<p>seaborn的顶级绘图函数：regplot()、catplot()、displot()、jointplot()、pairplot()等；</p>
+<p>seaborn的顶级绘图函数：regplot()、catplot()、distplot()、jointplot()、pairplot()等；</p>
 <p>函数具有许多参数，详细说明可以查看官方文档：<a href="https://seaborn.pydata.org/api.html。" target="_blank" rel="noopener">https://seaborn.pydata.org/api.html。</a></p>
 <h4 id="3-2-1-绘制变量关系图（散点图、折线图）"><a href="#3-2-1-绘制变量关系图（散点图、折线图）" class="headerlink" title="3.2.1 绘制变量关系图（散点图、折线图）"></a>3.2.1 绘制变量关系图（散点图、折线图）</h4><ul>
 <li>relplot([x, y, hue, size, style, data, row, …])：Figure-level方法，可视化变量之间的关系。默认绘制散点图。但可以通过使用色调（hue），大小（size）和样式（style）的语义映射到三个附加变量来增强绘图。<ul>
@@ -510,7 +510,7 @@ Name: Species, dtype: int64
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sns.catplot(x=<span class="string">'Species'</span>, y=<span class="string">'SepalLengthCm'</span>, data=iris, kind=<span class="string">"point"</span>)</span><br></pre></td></tr></table></figure>
 <pre><code>&lt;seaborn.axisgrid.FacetGrid at 0x1facccb6a58&gt;
 </code></pre><p><img src="/2018/11/18/python-visualization/output_54_1.png" alt="png"></p>
-<h4 id="3-2-3-可视化一个数据集的分布"><a href="#3-2-3-可视化一个数据集的分布" class="headerlink" title="3.2.3 可视化一个数据集的分布"></a>3.2.3 可视化一个数据集的分布</h4><p>displot()函数绘制单变量的直方图并拟合密度估计值（KDE）。</p>
+<h4 id="3-2-3-可视化一个数据集的分布"><a href="#3-2-3-可视化一个数据集的分布" class="headerlink" title="3.2.3 可视化一个数据集的分布"></a>3.2.3 可视化一个数据集的分布</h4><p>distplot()函数绘制单变量的直方图并拟合密度估计值（KDE）。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 单变量</span></span><br><span class="line">sns.distplot(iris[<span class="string">'SepalLengthCm'</span>])</span><br></pre></td></tr></table></figure>
 <pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x1faccd0e550&gt;
 </code></pre><p><img src="/2018/11/18/python-visualization/output_56_1.png" alt="png"></p>
